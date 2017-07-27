@@ -1,0 +1,41 @@
+$(document).ready(function() {
+  // Test loading jQ
+  console.log("jquery loaded!");
+
+  // Attach search button click handler
+  $('.search-button').on('click', function() {
+    var searchString = $('.search-input').val();
+    getSearchResults(searchString);
+  });
+
+  // Search function
+  function getSearchResults(searchTerm) {
+    console.log(searchTerm);
+
+    // Make ajax request
+    $.ajax({
+      url: 'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php',
+      data: {
+        action: 'query',
+        list: 'search',
+        srsearch: searchTerm,
+        format: 'json'
+      },
+      success: function(response) {
+        console.log(response.query.search);
+
+        // Show search results in page
+        var results = response.query.search;
+
+        results.forEach(function(result, index) {
+          var htmlString = "<div class='search-result'>";
+          htmlString += "<p class='search-result__title'>" + result.title + "</p>";
+          htmlString += "<p class='search-result__snippet'>" + result.snippet + "</p>";
+          htmlString += "</div>";
+
+          $('.search-results').append(htmlString);
+        });
+      }
+    });
+  }
+});
