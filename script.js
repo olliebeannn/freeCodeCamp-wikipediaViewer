@@ -28,8 +28,12 @@ $(document).ready(function() {
         var results = response.query.search;
 
         results.forEach(function(result, index) {
+          var url = "https://en.wikipedia.org/wiki/" + encodeURI(result.title);
+          console.log(url);
+
           var htmlString = "<div class='search-result'>";
-          htmlString += "<p class='search-result__title'>" + result.title + "</p>";
+          htmlString += "<p class='search-result__title'><a target='_blank' href='" + url + "'>" + result.title + "</a></p>";
+          console.log(htmlString);
           htmlString += "<p class='search-result__snippet'>" + result.snippet + "</p>";
           htmlString += "</div>";
 
