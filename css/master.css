@@ -1,37 +1,25 @@
 .flex {
-  display: flex;
-}
+  display: flex; }
 
 .flex-ai-center {
-  align-items: center;
-}
-
-// .flex-wrap {
-//   flex-wrap: wrap;
-// }
+  align-items: center; }
 
 .flex-grow {
-  flex-grow: 1;
-}
+  flex-grow: 1; }
 
 .search-input-container {
   min-width: 20rem;
-  width: auto;
-}
+  width: auto; }
 
 .search-results-container {
   margin: 0 auto;
-  max-width: 50rem;
-}
+  max-width: 50rem; }
 
 .search-result {
-  margin-bottom: 1rem;
-}
+  margin-bottom: 1rem; }
 
 .search-result__title {
-  font-size: 1.25rem;
-}
+  font-size: 1.25rem; }
 
 .search-result__title, .search-result__snippet {
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }

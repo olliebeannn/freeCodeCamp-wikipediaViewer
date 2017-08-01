@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title></title>
 
-    <!-- reset and master compiled css -->
-    <link rel="stylesheet" href="css/master.css">
-
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- master compiled css -->
+    <link rel="stylesheet" href="css/master.css">
 
     <!-- jquery required for bootstrap 4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -27,19 +27,25 @@
       <h1 class="text-center">Gettin' learnt</h1>
       <h3 class="text-center">Turn it up by reading some Wikipedia.</h3>
 
-      <div class="input-group">
-        <input type="text" class="form-control search-input" placeholder="Search...">
-        <span class="input-group-btn">
-          <button type="button" class="btn btn-primary search-button">Search</button>
-        </span>
+      <div class="flex flex-ai-center flex-wrap">
+
+        <div class="input-group search-input-container flex-grow">
+          <input type="text" class="form-control search-input" placeholder="Search...">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-primary search-button">Search</button>
+          </span>
+        </div>
+
+        <p class="mb-0 ml-4 mr-4">or</p>
+
+        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
+          <button type="button" class="btn btn-primary random-article-button">Random article, please.</button>
+        </a>
+
       </div>
 
-      <p>– or –</p>
-
-      <button type="button" class="btn btn-primary random-article-button">Random article, please.</button>
-
       <!-- Empty placeholder for search results -->
-      <div class="search-results">
+      <div class="search-results-container">
 
       </div>
 

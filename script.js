@@ -34,10 +34,10 @@ $(document).ready(function() {
           var htmlString = "<div class='search-result'>";
           htmlString += "<p class='search-result__title'><a target='_blank' href='" + url + "'>" + result.title + "</a></p>";
           console.log(htmlString);
-          htmlString += "<p class='search-result__snippet'>" + result.snippet + "</p>";
+          htmlString += "<p class='search-result__snippet'>" + result.snippet + "...</p>";
           htmlString += "</div>";
 
-          $('.search-results').append(htmlString);
+          $('.search-results-container').append(htmlString);
         });
       }
     });
