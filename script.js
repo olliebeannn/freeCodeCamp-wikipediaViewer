@@ -14,12 +14,15 @@ $(document).ready(function() {
 
     // Make ajax request
     $.ajax({
-      url: 'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php',
+      // Prefix for URL to use CORS if needed: https://cors-anywhere.herokuapp.com/
+      // Trying anonymous request with origin: '*' instead
+      url: 'https://en.wikipedia.org/w/api.php',
       data: {
         action: 'query',
         list: 'search',
         srsearch: searchTerm,
-        format: 'json'
+        format: 'json',
+        origin: '*'
       },
       success: function(response) {
         console.log(response.query.search);
